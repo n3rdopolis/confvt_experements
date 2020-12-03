@@ -1,0 +1,19 @@
+greetd seems to be based on TTYs, and doesn't really even supprt something like autovt where you can ask it to start an arbitary session. And text mode login is not seemless. It has to start one for the greeter login prompt, and then a new display server running the full screen terminal for the user once logged in
+
+framebuffery programs, like fullscreen, no display server FFMPEG off of a full console, or starting a test instance of Weston)
+       Below script works, needs Polkit auth though...
+
+
+Plymouth doesn't friggin work?
+    (reported)
+    ooooh my it's going to be a lot
+
+How do kernel panics appear?
+   They don't, needs TTYs (fblog/drmlog never got merged)
+
+
+Emergency console needs ...something, maybe kmscon, as it doesn't matter if that doesn't work
+Need something small enough to fit on on an initrd too in reality, because you also want pre-mount recovery 
+The below experement works, but it needs vte and cage (patched to not fail to drop permissions so it runs as root)
+
+
